@@ -43,8 +43,9 @@
 \RequirePackage{fontspec}
 \RequirePackage{anyfontsize}
 
+\newcommand\foo[1]{#1}
 \IfFontExistsTF{\@@mainfont}{\setmainfont{\@@mainfont}}{
-  \ClassWarning{SISSAletter}{Font \@@mainfont not found, using LiberationSans instead}
+  \ClassWarning{SISSAletter}{Font \foo{\@@mainfont} not found, using LiberationSans instead}
   \setmainfont{LiberationSans}[
     Path = fonts/,
     Ligatures = TeX,
